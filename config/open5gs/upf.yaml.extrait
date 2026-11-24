@@ -1,0 +1,13 @@
+# /etc/open5gs/upf.yaml — extrait des parties modifiées (VM 5G-Lab)
+# Seule l'adresse GTP-U (N3) est exposée sur l'adresse du cœur.
+# L'adresse PFCP (N4, 127.0.0.7) reste interne.
+
+upf:
+  pfcp:
+    server:
+      - address: 127.0.0.7          # N4 : pilotage par le SMF (inchangé)
+  gtpu:
+    server:
+      - address: 192.168.223.10     # N3 : tunnels GTP-U depuis les gNB (UDP 2152)
+  session:
+    - subnet: 10.45.0.1/16          # pool des UE, passerelle ogstun

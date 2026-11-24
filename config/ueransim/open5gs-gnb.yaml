@@ -1,0 +1,20 @@
+# ~/UERANSIM/config/open5gs-gnb.yaml — VM 5G-RAN (parties principales)
+
+mcc: '999'
+mnc: '70'
+nci: '0x000000010'
+idLength: 32
+tac: 1
+
+linkIp: 127.0.0.1          # liaison radio simulée avec l'UE (même VM)
+ngapIp: 192.168.223.20     # N2 : adresse du gNB vers l'AMF
+gtpIp: 192.168.223.20      # N3 : adresse du gNB pour les tunnels GTP-U
+
+amfConfigs:
+  - address: 192.168.223.10  # AMF sur la VM du cœur
+    port: 38412
+
+slices:
+  - sst: 1
+
+ignoreStreamIds: true

@@ -1,0 +1,20 @@
+# ~/UERANSIM/config/open5gs-ue.yaml — VM 5G-RAN (fichier fourni par UERANSIM, non modifié)
+# Valeurs de test publiques : identiques à l'abonné créé dans la WebUI d'Open5GS.
+
+supi: 'imsi-999700000000001'
+mcc: '999'
+mnc: '70'
+
+key: '465B5CE8B199B49FAA5F0A2EE238A6BC'   # clé K (valeur de test publique)
+op: 'E8ED289DEBA952E4283B54E88E6183CA'    # OPc (valeur de test publique)
+opType: 'OPC'
+amf: '8000'
+
+gnbSearchList:
+  - 127.0.0.1                # gNB local (liaison radio simulée)
+
+sessions:
+  - type: 'IPv4'
+    apn: 'internet'
+    slice:
+      sst: 1

@@ -1,0 +1,23 @@
+# /etc/open5gs/amf.yaml — extrait des parties modifiées (VM 5G-Lab)
+# Seule l'adresse NGAP (N2) est exposée sur l'adresse du cœur.
+# Les adresses SBI internes (127.0.0.5) restent inchangées.
+
+amf:
+  ngap:
+    server:
+      - address: 192.168.223.10     # N2 : écoute des gNB (SCTP 38412) — un espace après "address:" !
+  guami:
+    - plmn_id:
+        mcc: 999
+        mnc: 70
+  tai:
+    - plmn_id:
+        mcc: 999
+        mnc: 70
+      tac: 1
+  plmn_support:
+    - plmn_id:
+        mcc: 999
+        mnc: 70
+      s_nssai:
+        - sst: 1
